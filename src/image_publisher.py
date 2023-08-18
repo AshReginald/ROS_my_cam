@@ -6,7 +6,8 @@ from cv_bridge import CvBridge, CvBridgeError
 from sensor_msgs.msg import Image
 
 def publish_image():
-    """Capture frames from a camera and publish it to the topic image_raw
+    """
+        Capture frames from a camera and publish it to the topic image_raw
     """
     image_pub = rospy.Publisher("image_raw", Image, queue_size=10)
     bridge = CvBridge()
